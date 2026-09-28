@@ -1,0 +1,115 @@
+#include<iostream> 
+
+using namespace std; 
+
+class heroe{ 
+
+private: 
+
+    string nombre; 
+
+    int vida; 
+
+public: 
+
+    heroe(string,int); 
+
+    virtual void mostrarheroe(); 
+
+}; 
+
+class heroedeagilidad : public heroe{ 
+
+private: 
+
+    int VelocidadDeAtaque; 
+
+public: 
+
+    heroedeagilidad(string,int,int); 
+
+    void mostrarheroe(); 
+
+}; 
+
+class herodedeinteligencia : public heroe{ 
+
+private: 
+
+    int cantidadHechizos; 
+
+public: 
+
+    herodedeinteligencia(string,int,int); 
+
+    void mostrarheroe(); 
+
+}; 
+
+heroe::heroe(string _nombre,int _vida){ 
+
+nombre = _nombre; 
+
+vida = _vida; 
+
+} 
+
+void heroe::mostrarheroe(){ 
+
+cout<<"Nombre:"<<nombre<<endl; 
+
+cout<<"Vida:"<<vida<<endl; 
+
+} 
+
+heroedeagilidad::heroedeagilidad(string _nombre,int _vida,int _velocidaddeataque):heroe(_nombre,_vida){ 
+
+VelocidadDeAtaque = _velocidaddeataque; 
+
+} 
+
+void heroedeagilidad::mostrarheroe(){ 
+
+heroe::mostrarheroe(); 
+
+cout<<"Velocidad de ataque:"<<VelocidadDeAtaque<<endl; 
+
+} 
+
+herodedeinteligencia::herodedeinteligencia(string _nombre,int _vida,int _cantidadHechizos):heroe(_nombre,_vida){ 
+
+cantidadHechizos = _cantidadHechizos; 
+
+} 
+
+void herodedeinteligencia::mostrarheroe(){ 
+
+heroe::mostrarheroe(); 
+
+cout<<"Cantidad de hechizos:"<<cantidadHechizos<<endl; 
+
+} 
+
+int main(){ 
+
+heroe* vector[2]; 
+
+ 
+
+vector[0]=new heroedeagilidad("Juggernaut",600,140); 
+
+vector[0]->mostrarheroe(); 
+
+cout<<"\n"; 
+
+ 
+
+vector[1]=new herodedeinteligencia("Invoker",520,10); 
+
+vector[1]->mostrarheroe(); 
+
+cout<<"\n"; 
+
+return 0;  
+
+}
