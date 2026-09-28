@@ -1,0 +1,67 @@
+#include <iostream> 
+
+#include <string> 
+
+using namespace std; 
+
+  
+
+class Producto { 
+
+private: 
+
+    string nombre, marca; 
+
+  
+
+public: 
+
+    Producto(string _nombre, string _marca) { 
+
+        nombre = _nombre; 
+
+        marca = _marca; 
+
+  
+
+        cout << "Constructor: se creo el producto" << endl; 
+
+    } 
+
+    ~Producto() { 
+
+        cout << "Destructor: el objeto Producto dejo de existir" << endl; 
+
+    } 
+
+    void mostrarDatos() { 
+
+        cout << "Nombre: " << nombre << endl; 
+
+        cout << "Marca: " << marca << endl; 
+
+    } 
+
+}; 
+
+  
+
+int main() { 
+
+  
+
+    Producto producto1("Celular", "SAMSUNG"); 
+
+  
+
+    producto1.mostrarDatos(); 
+
+  
+
+    cout << "Fin del programa" << endl; 
+
+  
+
+    return 0; 
+
+} 
