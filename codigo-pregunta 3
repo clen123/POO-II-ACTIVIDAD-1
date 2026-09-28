@@ -1,0 +1,101 @@
+#include <iostream> 
+
+#include <string> 
+
+using namespace std; 
+
+  
+
+class Estudiante { 
+
+private: 
+
+    string nombre; 
+
+    int edad; 
+
+    string carrera; 
+
+  
+
+public: 
+
+    Estudiante(); 
+
+    Estudiante(string); 
+
+    Estudiante(string,int,string); 
+
+    void mostrarDatos(); 
+
+}; 
+
+Estudiante::Estudiante(){ 
+
+        nombre = "Sin nombre"; 
+
+        edad = 0; 
+
+        carrera = "Sin carrera"; 
+
+    } 
+
+Estudiante::Estudiante(string _nombre){ 
+
+        nombre = _nombre; 
+
+        edad = 0; 
+
+        carrera = "Sin carrera"; 
+
+} 
+
+Estudiante::Estudiante(string _nombre,int _edad,string _carrera){ 
+
+        nombre = _nombre; 
+
+        edad = _edad; 
+
+        carrera =_carrera; 
+
+    } 
+
+void Estudiante::mostrarDatos(){ 
+
+        cout << "Nombre: " << nombre << endl; 
+
+        cout << "Edad: " << edad << endl; 
+
+        cout << "Carrera: " << carrera << endl; 
+
+        cout << "------------------------" << endl; 
+
+    } 
+
+  
+
+int main(){ 
+
+    Estudiante estudiante1; 
+
+    Estudiante estudiante2("Carlos"); 
+
+    Estudiante estudiante3("Maria", 20, "Ingenieria de Sistemas"); 
+
+    cout << "ESTUDIANTE 1" << endl; 
+
+    estudiante1.mostrarDatos(); 
+
+    cout << "ESTUDIANTE 2" << endl; 
+
+    estudiante2.mostrarDatos(); 
+
+    cout << "ESTUDIANTE 3" << endl; 
+
+    estudiante3.mostrarDatos(); 
+
+  
+
+    return 0; 
+
+}
