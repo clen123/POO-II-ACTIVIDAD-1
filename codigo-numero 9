@@ -1,0 +1,137 @@
+#include <iostream> 
+
+#include <string> 
+
+using namespace std; 
+
+class Alumno { 
+
+private: 
+
+    string nombre; 
+
+    int edad; 
+
+    double nota; 
+
+  
+
+public: 
+
+    Alumno(string _nombre, int _edad, double _nota) { 
+
+        nombre = _nombre; 
+
+        edad = _edad; 
+
+        nota = _nota; 
+
+    } 
+
+    string getNombre() const { return nombre; } 
+
+    int getEdad() const { return edad; } 
+
+    double getNota() const { return nota; } 
+
+}; 
+
+class AlumnoView { 
+
+public: 
+
+    void mostrarDatos(const Alumno& alumno) { 
+
+        cout << "Nombre: " << alumno.getNombre() << endl; 
+
+        cout << "Edad: " << alumno.getEdad() << endl; 
+
+        cout << "Nota: " << alumno.getNota() << endl; 
+
+    } 
+
+  
+
+    void calcularPromedio(const Alumno& alumno) { 
+
+  
+
+        cout << "Promedio: " << alumno.getNota() << endl; 
+
+    } 
+
+  
+
+    void generarReporte(const Alumno& alumno) { 
+
+        cout << "Generando reporte para " << alumno.getNombre() << "..." << endl; 
+
+    } 
+
+}; 
+
+  
+
+  
+
+class AlumnoRepository { 
+
+public: 
+
+    void guardarDatos(const Alumno& alumno) { 
+
+        cout << "Guardando datos del alumno..." << endl; 
+
+    } 
+
+}; 
+
+  
+
+  
+
+class EmailService { 
+
+public: 
+
+    void enviarCorreo(const Alumno& alumno) { 
+
+        cout << "Enviando correo al alumno..." << endl; 
+
+    } 
+
+}; 
+
+  
+
+int main() { 
+
+     
+
+    Alumno alumno("Clen", 19, 15); 
+
+  
+
+    AlumnoView vista; 
+
+    AlumnoRepository repositorio; 
+
+    EmailService servicioEmail; 
+
+ 
+
+    vista.mostrarDatos(alumno); 
+
+    vista.calcularPromedio(alumno); 
+
+    repositorio.guardarDatos(alumno); 
+
+    servicioEmail.enviarCorreo(alumno); 
+
+    vista.generarReporte(alumno); 
+
+  
+
+    return 0; 
+
+}
