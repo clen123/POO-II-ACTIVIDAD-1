@@ -1,0 +1,57 @@
+#include <iostream> 
+
+using namespace std; 
+
+class persona { 
+
+    private: 
+
+    void metodo_ocultouno(); 
+
+    void metodo_ocultodos(); 
+
+}; 
+
+  
+
+void persona::metodo_ocultouno() { 
+
+} 
+
+  
+
+void persona::metodo_ocultodos() { 
+
+} 
+
+class estudiante : public persona { 
+
+    public: 
+
+    void realizarpruebas(); 
+
+}; 
+
+  
+
+void estudiante::realizarpruebas() { 
+
+    metodo_ocultouno(); 
+
+    metodo_ocultodos();  
+
+} 
+
+  
+
+int main() { 
+
+    estudiante alu; 
+
+    alu.realizarpruebas(); 
+
+     
+
+    return 0; 
+
+} 
