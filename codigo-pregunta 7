@@ -1,0 +1,65 @@
+#include <iostream> 
+
+#include <string> 
+
+using namespace std; 
+
+  
+
+class Cuentabancaria { 
+
+private: 
+
+    string nombre; 
+
+    int saldo; 
+
+  
+
+public: 
+
+    void setnombre(string _nombre) { 
+
+        nombre = _nombre; 
+
+    } 
+
+    void setsaldo(int _saldo) { 
+
+        saldo = _saldo; 
+
+    } 
+
+    string getnombre() { 
+
+        return nombre; 
+
+    } 
+
+    int getsaldo() { 
+
+        return saldo; 
+
+    } 
+
+}; 
+
+  
+
+int main() { 
+
+    Cuentabancaria cuenta1; 
+
+    cuenta1.setnombre("Matias"); 
+
+    cuenta1.setsaldo(2000); 
+
+    cout << "Titular: " <<cuenta1.getnombre() << endl; 
+
+    cout << "Saldo: S/ " << cuenta1.getsaldo() << endl; 
+
+  
+
+    return 0; 
+
+} 
