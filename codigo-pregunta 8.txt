@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class Alumno{
+private:
+    string nombre;
+    int edad;
+    double nota;
+
+public:
+    Alumno(string _nombre, int _edad, double _nota){
+        nombre = _nombre;
+        edad = _edad;
+        nota = _nota;
+    }
+
+    void mostrarDatos(){
+        cout << "Nombre: " << nombre << endl;
+        cout << "Edad: " << edad << endl;
+        cout << "Nota: " << nota << endl;
+    }
+
+    void calcularPromedio(){
+        cout << "Promedio: " << nota << endl;
+    }
+
+    void guardarDatos(){
+        cout << "Guardando datos del alumno..." << endl;
+    }
+
+    void enviarCorreo(){
+        cout << "Enviando correo al alumno..." << endl;
+    }
+
+    void generarReporte(){
+        cout << "Generando reporte..." << endl;
+    }
+};
+
+int main(){
+
+    Alumno alumno("Clen", 19, 15);
+
+    alumno.mostrarDatos();
+    alumno.calcularPromedio();
+    alumno.guardarDatos();
+    alumno.enviarCorreo();
+    alumno.generarReporte();
+
+    return 0;
+}

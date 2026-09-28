@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Persona{
+public:
+    string nombre;
+    int edad;
+};
+
+int main(){
+
+    Persona persona;
+
+ 
+    persona.nombre = "Clen";
+    persona.edad = 19;
+
+  
+    cout << "Nombre: " << persona.nombre << endl;
+    cout << "Edad: " << persona.edad << endl;
+
+    return 0;
+}
